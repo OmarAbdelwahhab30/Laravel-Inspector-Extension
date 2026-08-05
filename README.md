@@ -6,6 +6,14 @@ Network-layer DevTools panel. No build step — load it unpacked:
 2. Click **Load unpacked**, select this `extension/` folder.
 3. Open DevTools on any page hitting a Laravel app with the `laravel-inspector` package enabled, and switch to the **Laravel** panel.
 
+## Laravel package
+
+To display backend request details in the DevTools panel, install the Laravel package in your application:
+
+https://github.com/OmarAbdelwahhab30/Laravel-Inspector-Package
+
+Without the package, the extension will still load, but no Laravel request snapshots will be available.
+
 Requests carrying an `X-Laravel-Devtools-Request` response header get a red dot in the list; click one to see its backend snapshot (Controller/Route/Response now, Queries/Events/Jobs/Timeline once those collectors are built in the package).
 
 Note: `chrome.devtools.network.onRequestFinished` only sees requests that happen while the panel is open — `background.js` independently records the same header via `chrome.webRequest` so requests from before the panel was opened still show up.
