@@ -23,5 +23,5 @@ To restore the backfill, grant the wider access by hand: `chrome://extensions` �
 ## Opening the extension
 
 1. Open the Laravel application in Chrome.
-2. Press **F12** (or **Right-click → Inspect**) to open Chrome DevTools.
+2. Press **Right-click → Inspect** to open Chrome DevTools.
 3. In the DevTools tab bar, click **Laravel Inspector**.
