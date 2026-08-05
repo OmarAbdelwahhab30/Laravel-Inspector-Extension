@@ -19,3 +19,9 @@ Requesting "read every site you visit" for a tool that only ever talks to a loca
 **On a dev domain outside that list** (`myapp.local`, `*.ddev.site`, a custom host), only the pre-panel backfill degrades: nothing recorded before you opened DevTools appears. Everything else keeps working — `chrome.devtools.network` needs no host permission, and the panel's calls to `/__devtools/request/{id}` and `/__devtools/open-editor` succeed on plain CORS, since the package's `AllowExtensionOrigin` middleware answers both with `Access-Control-Allow-Origin: *`.
 
 To restore the backfill, grant the wider access by hand: `chrome://extensions` → **Laravel Inspector** → **Details** → **Site access** → **On all sites**.
+
+## Opening the extension
+
+1. Open the Laravel application in Chrome.
+2. Press **F12** (or **Right-click → Inspect**) to open Chrome DevTools.
+3. In the DevTools tab bar, click **Laravel Inspector**.
