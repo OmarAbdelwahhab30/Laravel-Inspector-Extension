@@ -1,0 +1,43 @@
+{
+    "manifest_version": 3,
+    "name": "Laravel Inspector",
+    "version": "0.1.0",
+    "description": "Network-layer DevTools panel that shows the Laravel backend execution behind any request tagged with X-Laravel-Devtools-Request.",
+    "devtools_page": "devtools.html",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "webRequest",
+        "storage",
+        "activeTab"
+    ],
+    "host_permissions": [
+        "http://localhost/*",
+        "https://localhost/*",
+        "http://127.0.0.1/*",
+        "https://127.0.0.1/*",
+        "http://*.localhost/*",
+        "https://*.localhost/*",
+        "http://*.test/*",
+        "https://*.test/*"
+    ],
+    "optional_host_permissions": [
+        "http://*/*",
+        "https://*/*"
+    ],
+    "icons": {
+        "16": "icons/icon16.png",
+        "32": "icons/icon32.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "action": {
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "32": "icons/icon32.png",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png"
+        }
+    }
+}
